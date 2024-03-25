@@ -1,4 +1,4 @@
-Nextjs Backend test task
+Nestjs Backend test task
 
 Key Features:
 🔐 Nestjs
@@ -52,27 +52,6 @@ Start the app:
 npm run start:dev
 
 ----------------------------------------------------------------------------------
-
-postman collection of the api's
-
-register endpoint
-POST Request
-http://localhost:4000/auth/signup
-
-
-signin endpoint
-POST Request
-http://localhost:4000/auth/signin
-
-
-biometric login endpoint
-POST Request
-http://localhost:4000/auth/biometric
-
-
-signout endpoint
-GET Request
-http://localhost:4000/auth/signout
 
 
 <!-- Graphql collections -->
