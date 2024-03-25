@@ -53,6 +53,10 @@ npm run start:dev
 
 ----------------------------------------------------------------------------------
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d6b2d18b2e8f2bb7b531631816881a6e417feeb6
 <!-- Graphql collections -->
 
 <!-- sign up mutations -->
@@ -108,4 +112,8 @@ mutation Biometric($input: BiometricInInput!) {
 
 
 <!-- query variables -->
+<<<<<<< HEAD
 {"input": {"biometricKey": ""}}
+=======
+{"input": {"biometricKey": "1234567890"}}
+>>>>>>> d6b2d18b2e8f2bb7b531631816881a6e417feeb6
