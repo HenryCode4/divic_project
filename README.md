@@ -1,4 +1,4 @@
-Nextjs Backend test task
+Nestjs Backend test task
 
 Key Features:
 🔐 Nestjs
@@ -53,28 +53,6 @@ npm run start:dev
 
 ----------------------------------------------------------------------------------
 
-postman collection of the api's
-
-register endpoint
-POST Request
-http://localhost:4000/auth/signup
-
-
-signin endpoint
-POST Request
-http://localhost:4000/auth/signin
-
-
-biometric login endpoint
-POST Request
-http://localhost:4000/auth/biometric
-
-
-signout endpoint
-GET Request
-http://localhost:4000/auth/signout
-
-
 <!-- Graphql collections -->
 
 <!-- sign up mutations -->
@@ -87,8 +65,8 @@ mutation SignUp($input: SignUpInput!) {
 }
 <!-- query variables -->
 {"input": {"email": "g@gmail.com",
-  "name": "g",
-  "password": "g"}}
+  "name": "",
+  "password": ""}}
 
 
 <!-- sign up mutations -->
@@ -101,8 +79,8 @@ mutation SignIn($input: SignInInput!) {
 }
 
 <!-- query variables -->
-{"input": {"email": "g@gmail.com",
-  "password": "g"}}
+{"input": {"email": "",
+  "password": ""}}
 
 
 
@@ -114,7 +92,7 @@ mutation Logout($id: String!) {
 }
 
 <!-- query variables -->
-{"id": "2dc5019c-6a30-407b-867c-82d1d19a0257"}
+{"id": ""}
 
 
 
@@ -130,4 +108,4 @@ mutation Biometric($input: BiometricInInput!) {
 
 
 <!-- query variables -->
-{"input": {"biometricKey": "1234567890"}}
+{"input": {"biometricKey": ""}}
