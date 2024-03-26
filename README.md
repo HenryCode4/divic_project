@@ -8,6 +8,8 @@ bcryptjs
 validator
 cookies
 GraphQl
+passport-jwt
+guard
 
 ---------------------------------------------------------------------------------
 
