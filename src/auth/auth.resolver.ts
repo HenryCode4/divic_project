@@ -8,6 +8,11 @@ import { SignInInput } from './dto/signin-input';
 import { LogoutResponse } from './dto/logout-response';
 import { BiometricInInput } from './dto/biometric-response';
 import { Public } from './decorators/public.decorator';
+import { NewTokensResponse } from './dto/newTokensResponse';
+import { CurrentUserId } from './decorators/currentUserId.decorator';
+import { CurrentUser } from './decorators/currentUser.decorator';
+import { UseGuards } from '@nestjs/common';
+import { RefreshTokenGuard } from './guards/refreshToken.guard';
 
 @Resolver(() => Auth)
 export class AuthResolver {
@@ -50,5 +55,15 @@ export class AuthResolver {
   @Query(()=> String)
   hello(){
     return "Hello world"
+  }
+
+  @Public()
+  @UseGuards(RefreshTokenGuard)
+  @Mutation(() => NewTokensResponse)
+  getNewTokens(
+    @CurrentUserId() userId: string,
+    @CurrentUser('refreshToken') refreshToken: string,
+  ){
+    return this.authService.getNewToken(userId, refreshToken)
   }
  }

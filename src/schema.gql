@@ -17,10 +17,16 @@ type LogoutResponse {
 
 type Mutation {
   biometric(biometricInInput: BiometricInInput!): SignResponse!
+  getNewTokens: NewTokensResponse!
   logout(id: String!): LogoutResponse!
   signin(signInInput: SignInInput!): SignResponse!
   signup(signUpInput: SignUpInput!): SignResponse!
   updateAuth(updateAuthInput: UpdateAuthInput!): Auth!
+}
+
+type NewTokensResponse {
+  accessToken: String!
+  refreshToken: String!
 }
 
 type Query {
